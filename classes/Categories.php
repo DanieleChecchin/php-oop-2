@@ -1,6 +1,6 @@
 <?php
 
-class Cats
+class Categories
 {
     public $name;
 }

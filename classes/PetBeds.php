@@ -9,7 +9,7 @@ class PetBeds extends Products
 
     public function __construct(string $image, string $title, float $price, string $typeOf, string $color, string $season)
     {
-        parent::__construct($image,  $title,  $price,  $typeOf,  $color, $season);
+        parent::__construct($image,  $title,  $price,  'Cucce');
 
         $this->color = $color;
         $this->season = $season;

@@ -10,13 +10,15 @@ class Products
     public $title;
     public $price;
     public $typeOf;
+    public $category;
 
-    public function __construct(string $image, string $title, float $price, string $typeOf)
+    public function __construct(string $image, string $title, float $price, string $typeOf, string $category)
     {
         $this->image = $image;
         $this->title = $title;
         $this->price = $price;
-        $this->typeOf = $typeOf;                                         // Construct
+        $this->typeOf = $typeOf;
+        $this->category = $category;                                       // Construct
     }
 
     public function getImage()
@@ -34,5 +36,9 @@ class Products
     public function getTypeOf()
     {
         return $this->typeOf;
+    }
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

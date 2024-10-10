@@ -3,6 +3,8 @@
 require_once __DIR__ . '/classes/Products.php';
 require_once __DIR__ . '/classes/Foods.php';
 require_once __DIR__ . '/classes/PetBeds.php';
+require_once __DIR__ . '/classes/AnimalToys.php';
+require_once __DIR__ . '/classes/Categories.php'
 
 ?>
 <!DOCTYPE html>
@@ -28,11 +30,10 @@ require_once __DIR__ . '/classes/PetBeds.php';
                 <div class="card-body">
                     <h5 class="card-title"> </h5>
                     <p class="card-text">
-                        <?php var_dump(new Products('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nutrixpiu.it%2Fnegozio%2Fcani-da-seguita%2F&psig=AOvVaw3evazt8FF-UycfdyAIRjLS&ust=1728654104142000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCGl8b4g4kDFQAAAAAdAAAAABAE', 'Nutrix', 7.99, 'Cibo')); ?>
+                        <?php var_dump(new Products('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.obi-italia.it%2Farticoli-per-animali%2Farticoli-per-cani%2Fc%2F3747&psig=AOvVaw3KwR5v52CJiQ5Mv3fnjQmd&ust=1728657964735000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjknvqGhIkDFQAAAAAdAAAAABAE', 'Special', 7.99, 'Cibo', 'dog')); ?>
                     </p>
-                    <p class="card-text">
-                        <?php var_dump(new Foods('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nutrixpiu.it%2Fnegozio%2Fcani-da-seguita%2F&psig=AOvVaw3evazt8FF-UycfdyAIRjLS&ust=1728654104142000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCGl8b4g4kDFQAAAAAdAAAAABAE', 'Nutrix', 7.99, 'Cibo', 'Piccoli animali')); ?>
-                    </p>
+                    >
+
                 </div>
             </div>
 
