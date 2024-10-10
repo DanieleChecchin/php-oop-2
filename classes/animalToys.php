@@ -7,9 +7,9 @@ class AnimalToys extends Products
     public $color;
     public $weight;
 
-    public function __construct(string $image, string $title, float $price, string $typeOf, string $color, float $weight)
+    public function __construct(string $image, string $title, float $price, string $typeOf, $category, string $color, float $weight)
     {
-        parent::__construct($image,  $title,  $price, 'Giocattoli');
+        parent::__construct($image,  $title,  $price, 'Giocattoli', $category);
 
         $this->color = $color;
         $this->weight = $weight;
