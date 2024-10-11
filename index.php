@@ -4,15 +4,20 @@ require_once __DIR__ . '/classes/Products.php';
 require_once __DIR__ . '/classes/Foods.php';
 require_once __DIR__ . '/classes/PetBeds.php';
 require_once __DIR__ . '/classes/AnimalToys.php';
-require_once __DIR__ . '/classes/Categories.php';
+require_once __DIR__ . '/classes/Category.php';
+require_once __DIR__ . '/traits/Info.php';
 
 //CATEGORIE
-$dog = new Categories('Cane');
-$cat = new Categories('Gatto');
+$dog = new Category('Cane', 'https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101131/69423991-icona-cane-o-il-logo-in-stile-linea-moderna-l-alta-qualit%C3%A0-pittogramma-contorno-nero-per-la.jpg');
+$cat = new Category('Gatto', 'https://img.freepik.com/premium-photo/cat-logo-icon-silhouette-vector-style-with-white-background_1047546-8007.jpg');
 
 // CIBO
 $food1 = new Foods('https://m.media-amazon.com/images/I/41Y35B127wL._AC_UF894,1000_QL80_.jpg', 'Special Dog', 7.99, 'Cibo', $dog, 'Cani adulti');
 $food2 = new Foods('https://fera24.it/images/thumbnails/960/1214/detailed/129/5900951299209F1.jpg', 'Whiskas', 5.99, 'Cibo', $cat, 'Gatti cuccioli');
+
+$food1->getDescription('Cibo di altà qualità per tutti i cani');
+$food2->getDescription('Cibo di altà qualità per tutti i gatti');
+
 
 $foods = [
     $food1,
@@ -65,6 +70,7 @@ $toys = [
                     <p> <?= $singleFood->getTypeOf(); ?> </p>
                     <p> <?= $singleFood->category->name; ?> </p>
                     <p> <?= $singleFood->getTarget(); ?> </p>
+                    <p> <?= $singleFood->getDescription(); ?> </p>
                 </div>
             </div>
             <?php }; ?>

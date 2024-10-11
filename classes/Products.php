@@ -1,18 +1,16 @@
 <?php
 
-
-
-//immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
+require_once __DIR__ . '/Category.php';
 
 class Products
 {                             // Variabili d'istanza
-    public $image;
-    public $title;
-    public $price;
-    public $typeOf;
-    public $category;
+    public string $image;
+    public string $title;
+    public float $price;
+    public string $typeOf;
+    public Category $category;
 
-    public function __construct(string $image, string $title, float $price, string $typeOf, $category)
+    public function __construct(string $image, string $title, float $price, string $typeOf, Category $category)
     {
         $this->image = $image;
         $this->title = $title;
