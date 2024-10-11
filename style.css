@@ -1,0 +1,22 @@
+.card {
+    height: 600px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.food {
+    background-color: rgb(144, 226, 199);
+}
+
+.pet-bed {
+    background-color: rgb(231, 105, 105);
+}
+
+.toy {
+    background-color: rgb(196, 141, 248);
+}

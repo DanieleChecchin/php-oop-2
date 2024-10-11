@@ -19,7 +19,6 @@ $food2 = new Foods('https://fera24.it/images/thumbnails/960/1214/detailed/129/59
 $food1->setInfo('Cibo di altà qualità per tutti i cani');
 $food2->setInfo('Cibo di altà qualità per tutti i gatti');
 
-var_dump($food1->setPrice(-22));
 
 
 $foods = [
@@ -64,56 +63,57 @@ $toys = [
     <title>PHP OOP 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main class="container py-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-12">
-                <h1 class="fw-bold text-center">PHP OOP 2</h1>
+                <h1 class="fw-bold text-center mb-5">NEGOZIO ONLINE</h1>
             </div>
             <?php foreach ($foods as $singleFood) { ?>
-                <div class="card col-6" style="width: 18rem;">
-                    <img src="<?= $singleFood->getImage() ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> <?= $singleFood->getTitle(); ?> </h5>
-                        <p class="card-text"> <?= $singleFood->getPrice(); ?> </p>
-                        <p> <?= $singleFood->getTypeOf(); ?> </p>
-                        <p> <?= $singleFood->category->name; ?> </p>
-                        <p> <?= $singleFood->getTarget(); ?> </p>
-                        <p> <?= $singleFood->getInfo(); ?> </p>
-                    </div>
+            <div class="card col-6 food" style="width: 18rem;">
+                <img src="<?= $singleFood->getImage() ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold"> <?= $singleFood->getTitle(); ?> </h5>
+                    <p class="card-text"> <span class="fst-italic">Prezzo:</span> <?= $singleFood->getPrice(); ?> </p>
+                    <p> <span class="fst-italic">Tipo di prodotto:</span> <?= $singleFood->getTypeOf(); ?> </p>
+                    <p> <span class="fst-italic">Pensato per:</span> <?= $singleFood->category->name; ?> </p>
+                    <p> <span class="fst-italic">Indicato per:</span> <?= $singleFood->getTarget(); ?> </p>
+                    <p> <span class="fst-italic">Descrizione:</span> <?= $singleFood->getInfo(); ?> </p>
                 </div>
+            </div>
             <?php }; ?>
 
             <?php foreach ($petBeds as $singlePetBed) { ?>
-                <div class="card col-6" style="width: 18rem;">
-                    <img src="<?= $singlePetBed->getImage() ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> <?= $singlePetBed->getTitle(); ?> </h5>
-                        <p class="card-text"> <?= $singlePetBed->getPrice(); ?> </p>
-                        <p> <?= $singlePetBed->getTypeOf(); ?> </p>
-                        <p> <?= $singlePetBed->category->name; ?> </p>
-                        <p> <?= $singlePetBed->getColor(); ?> </p>
-                        <p> <?= $singlePetBed->getSeason(); ?> </p>
-                        <p> <?= $singlePetBed->getInfo(); ?> </p>
-                    </div>
+            <div class="card col-6 pet-bed" style="width: 18rem;">
+                <img src="<?= $singlePetBed->getImage() ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold"> <?= $singlePetBed->getTitle(); ?> </h5>
+                    <p class="card-text"> <span class="fst-italic">Prezzo:</span> <?= $singlePetBed->getPrice(); ?> </p>
+                    <p> <span class="fst-italic">Tipo di prodotto:</span> <?= $singlePetBed->getTypeOf(); ?> </p>
+                    <p> <span class="fst-italic">Pensato per:</span> <?= $singlePetBed->category->name; ?> </p>
+                    <p> <span class="fst-italic">Colore:</span> <?= $singlePetBed->getColor(); ?> </p>
+                    <p> <span class="fst-italic">Stagione:</span> <?= $singlePetBed->getSeason(); ?> </p>
+                    <p> <span class="fst-italic">Descrizione:</span> <?= $singlePetBed->getInfo(); ?> </p>
                 </div>
+            </div>
             <?php }; ?>
 
             <?php foreach ($toys as $singleToy) { ?>
-                <div class="card col-6" style="width: 18rem;">
-                    <img src=" <?= $singleToy->getImage() ?> " class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> <?= $singleToy->getTitle(); ?> </h5>
-                        <p class="card-text"> <?= $singleToy->getPrice(); ?> </p>
-                        <p> <?= $singleToy->getTypeOf(); ?> </p>
-                        <p> <?= $singleToy->category->name; ?> </p>
-                        <p> <?= $singleToy->getColor(); ?> </p>
-                        <p> <?= $singleToy->getWeight(); ?> </p>
-                        <p> <?= $singleToy->getInfo(); ?> </p>
-                    </div>
+            <div class="card col-6 toy" style="width: 18rem;">
+                <img src=" <?= $singleToy->getImage() ?> " class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold"> <?= $singleToy->getTitle(); ?> </h5>
+                    <p class="card-text"> <span class="fst-italic">Prezzo:</span> <?= $singleToy->getPrice(); ?> </p>
+                    <p> <span class="fst-italic">Tipo di prodotto:</span> <?= $singleToy->getTypeOf(); ?> </p>
+                    <p> <span class="fst-italic">Pensato per:</span> <?= $singleToy->category->name; ?> </p>
+                    <p> <span class="fst-italic">Colore:</span> <?= $singleToy->getColor(); ?> </p>
+                    <p> <span class="fst-italic">Peso:</span> <?= $singleToy->getWeight(); ?> </p>
+                    <p> <span class="fst-italic">Descrizione:</span> <?= $singleToy->getInfo(); ?> </p>
                 </div>
+            </div>
             <?php }; ?>
 
         </div>

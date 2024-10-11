@@ -29,7 +29,7 @@ class Products
     }
     public function getPrice()
     {
-        return $this->price;
+        return $this->price . ' €';
     }
     public function setPrice(float $price)
     {

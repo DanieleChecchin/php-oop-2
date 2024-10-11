@@ -26,6 +26,6 @@ class AnimalToys extends Products
     }
     public function getWeight()
     {
-        return $this->weight;
+        return $this->weight . ' kg';
     }
 }
