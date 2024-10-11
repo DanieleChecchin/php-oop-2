@@ -31,6 +31,14 @@ class Products
     {
         return $this->price;
     }
+    public function setPrice(float $price)
+    {
+        if ($price > 0) {
+            $this->price = $price;
+        } else {
+            throw new InvalidArgumentException('Il prezzo non può essere inferiore a 0.00');
+        }
+    }
     public function getTypeOf()
     {
         return $this->typeOf;

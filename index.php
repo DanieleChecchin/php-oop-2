@@ -19,6 +19,8 @@ $food2 = new Foods('https://fera24.it/images/thumbnails/960/1214/detailed/129/59
 $food1->setInfo('Cibo di altà qualità per tutti i cani');
 $food2->setInfo('Cibo di altà qualità per tutti i gatti');
 
+var_dump($food1->setPrice(-22));
+
 
 $foods = [
     $food1,
@@ -71,47 +73,47 @@ $toys = [
                 <h1 class="fw-bold text-center">PHP OOP 2</h1>
             </div>
             <?php foreach ($foods as $singleFood) { ?>
-            <div class="card col-6" style="width: 18rem;">
-                <img src="<?= $singleFood->getImage() ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> <?= $singleFood->getTitle(); ?> </h5>
-                    <p class="card-text"> <?= $singleFood->getPrice(); ?> </p>
-                    <p> <?= $singleFood->getTypeOf(); ?> </p>
-                    <p> <?= $singleFood->category->name; ?> </p>
-                    <p> <?= $singleFood->getTarget(); ?> </p>
-                    <p> <?= $singleFood->getInfo(); ?> </p>
+                <div class="card col-6" style="width: 18rem;">
+                    <img src="<?= $singleFood->getImage() ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <?= $singleFood->getTitle(); ?> </h5>
+                        <p class="card-text"> <?= $singleFood->getPrice(); ?> </p>
+                        <p> <?= $singleFood->getTypeOf(); ?> </p>
+                        <p> <?= $singleFood->category->name; ?> </p>
+                        <p> <?= $singleFood->getTarget(); ?> </p>
+                        <p> <?= $singleFood->getInfo(); ?> </p>
+                    </div>
                 </div>
-            </div>
             <?php }; ?>
 
             <?php foreach ($petBeds as $singlePetBed) { ?>
-            <div class="card col-6" style="width: 18rem;">
-                <img src="<?= $singlePetBed->getImage() ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> <?= $singlePetBed->getTitle(); ?> </h5>
-                    <p class="card-text"> <?= $singlePetBed->getPrice(); ?> </p>
-                    <p> <?= $singlePetBed->getTypeOf(); ?> </p>
-                    <p> <?= $singlePetBed->category->name; ?> </p>
-                    <p> <?= $singlePetBed->getColor(); ?> </p>
-                    <p> <?= $singlePetBed->getSeason(); ?> </p>
-                    <p> <?= $singlePetBed->getInfo(); ?> </p>
+                <div class="card col-6" style="width: 18rem;">
+                    <img src="<?= $singlePetBed->getImage() ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <?= $singlePetBed->getTitle(); ?> </h5>
+                        <p class="card-text"> <?= $singlePetBed->getPrice(); ?> </p>
+                        <p> <?= $singlePetBed->getTypeOf(); ?> </p>
+                        <p> <?= $singlePetBed->category->name; ?> </p>
+                        <p> <?= $singlePetBed->getColor(); ?> </p>
+                        <p> <?= $singlePetBed->getSeason(); ?> </p>
+                        <p> <?= $singlePetBed->getInfo(); ?> </p>
+                    </div>
                 </div>
-            </div>
             <?php }; ?>
 
             <?php foreach ($toys as $singleToy) { ?>
-            <div class="card col-6" style="width: 18rem;">
-                <img src=" <?= $singleToy->getImage() ?> " class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> <?= $singleToy->getTitle(); ?> </h5>
-                    <p class="card-text"> <?= $singleToy->getPrice(); ?> </p>
-                    <p> <?= $singleToy->getTypeOf(); ?> </p>
-                    <p> <?= $singleToy->category->name; ?> </p>
-                    <p> <?= $singleToy->getColor(); ?> </p>
-                    <p> <?= $singleToy->getWeight(); ?> </p>
-                    <p> <?= $singleToy->getInfo(); ?> </p>
+                <div class="card col-6" style="width: 18rem;">
+                    <img src=" <?= $singleToy->getImage() ?> " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <?= $singleToy->getTitle(); ?> </h5>
+                        <p class="card-text"> <?= $singleToy->getPrice(); ?> </p>
+                        <p> <?= $singleToy->getTypeOf(); ?> </p>
+                        <p> <?= $singleToy->category->name; ?> </p>
+                        <p> <?= $singleToy->getColor(); ?> </p>
+                        <p> <?= $singleToy->getWeight(); ?> </p>
+                        <p> <?= $singleToy->getInfo(); ?> </p>
+                    </div>
                 </div>
-            </div>
             <?php }; ?>
 
         </div>
