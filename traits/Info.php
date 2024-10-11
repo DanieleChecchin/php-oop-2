@@ -2,10 +2,15 @@
 
 trait Info
 {
-    public $description;
+    private $info;
 
-    public function getDescription()
+    public function getinfo()
     {
-        return $this->description;
+        return $this->info;
+    }
+
+    public function setinfo($info)
+    {
+        $this->info = $info;
     }
 }

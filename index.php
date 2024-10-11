@@ -15,8 +15,9 @@ $cat = new Category('Gatto', 'https://img.freepik.com/premium-photo/cat-logo-ico
 $food1 = new Foods('https://m.media-amazon.com/images/I/41Y35B127wL._AC_UF894,1000_QL80_.jpg', 'Special Dog', 7.99, 'Cibo', $dog, 'Cani adulti');
 $food2 = new Foods('https://fera24.it/images/thumbnails/960/1214/detailed/129/5900951299209F1.jpg', 'Whiskas', 5.99, 'Cibo', $cat, 'Gatti cuccioli');
 
-$food1->getDescription('Cibo di altà qualità per tutti i cani');
-$food2->getDescription('Cibo di altà qualità per tutti i gatti');
+//Trait
+$food1->setInfo('Cibo di altà qualità per tutti i cani');
+$food2->setInfo('Cibo di altà qualità per tutti i gatti');
 
 
 $foods = [
@@ -28,14 +29,22 @@ $foods = [
 $petBed1 = new PetBeds('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWu3l-P-c_5OEEW6J-sxi3E3ZqTwrC4maPw&s', 'Satur', 25.99, 'Cuccia', $dog, 'Grigia', 'Estiva');
 $petBed2 = new PetBeds('https://m.media-amazon.com/images/I/71cS+MII06L._AC_UF350,350_QL80_.jpg', 'Cpaps', 38.99, 'Cuccia', $cat, 'Nero', 'Invernale');
 
+//Trait
+$petBed1->setinfo('Una cuccia estiva perfetta per il tuo cane');
+$petBed2->setinfo('Una cuccia invernale perfetta per il tuo gatto');
+
 $petBeds = [
     $petBed1,
     $petBed2
 ];
 
 // GIOCATTOLI
-$toy1 = new AnimalToys('https://arcaplanet.vtexassets.com/arquivos/ids/283187/FP4.1.307-AP--1-.jpg?v=638158653329870000', 'Lovedi', 15.99, 'Giocattolo', $dog, 'Marrone', 0.300);
-$toy2 = new AnimalToys('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfixc7loJc5-06DKyFRzKAmSBf8MJNd8QVEA&s', 'Zolux', 22.99, 'Giocattolo', $cat, 'Bianco e Nero', 0.150);
+$toy1 = new AnimalToys('https://arcaplanet.vtexassets.com/arquivos/ids/283187/FP4.1.307-AP--1-.jpg?v=638158653329870000', 'Lovedi', 15.99, 'Giocattolo', $dog, 'Bianco e Nero', 0.300);
+$toy2 = new AnimalToys('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfixc7loJc5-06DKyFRzKAmSBf8MJNd8QVEA&s', 'Zolux', 22.99, 'Giocattolo', $cat, 'Azzurro', 0.150);
+
+//Trait
+$toy1->setInfo('Un giocattolo a forma di mucca che il tuo cane amerà');
+$toy2->setInfo('Un giocattolo formato gattino che il tuo gatto adorerà');
 
 $toys = [
     $toy1,
@@ -70,7 +79,7 @@ $toys = [
                     <p> <?= $singleFood->getTypeOf(); ?> </p>
                     <p> <?= $singleFood->category->name; ?> </p>
                     <p> <?= $singleFood->getTarget(); ?> </p>
-                    <p> <?= $singleFood->getDescription(); ?> </p>
+                    <p> <?= $singleFood->getInfo(); ?> </p>
                 </div>
             </div>
             <?php }; ?>
@@ -85,6 +94,7 @@ $toys = [
                     <p> <?= $singlePetBed->category->name; ?> </p>
                     <p> <?= $singlePetBed->getColor(); ?> </p>
                     <p> <?= $singlePetBed->getSeason(); ?> </p>
+                    <p> <?= $singlePetBed->getInfo(); ?> </p>
                 </div>
             </div>
             <?php }; ?>
@@ -99,6 +109,7 @@ $toys = [
                     <p> <?= $singleToy->category->name; ?> </p>
                     <p> <?= $singleToy->getColor(); ?> </p>
                     <p> <?= $singleToy->getWeight(); ?> </p>
+                    <p> <?= $singleToy->getInfo(); ?> </p>
                 </div>
             </div>
             <?php }; ?>
